@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchiveChang</title>
+    <style>
+        #clock {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            font-size: 2.5rem;
+            font-weight: light;
+            color: #000000;
+            background: linear-gradient(90deg, #7e7e7e, #87cefa, #b19cd9);
+            padding: 12px 28px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px #0002;
+            letter-spacing: 2px;
+            z-index: 10;
+        }
+        body {
+            background: linear-gradient(135deg, #00000083, #2f00ffe1, #ffffff, #ffffff);
+            font-family: "Bitcount Prop Single", system-ui;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            position: relative; /* Needed for absolute positioning */
+        }
+        a {
+            display: inline-block;
+            padding: 10px 22px;
+            margin: 8px 0;
+            background: linear-gradient(90deg, #ffb6c1, #87cefa, #b19cd9);
+            color: #222;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 2px 8px #0002;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+        }
+        a:hover {
+            background: linear-gradient(90deg, #b19cd9, #87cefa, #ffb6c1);
+            color: #fff;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <img src="clipart3302349.png" alt=""width="300">
+    <div id="clock"></div>
+    <h1>Hello My Friend</h1>
+    <p>Welcome to My first ever website</p>
+    <p>this website is about my coding progress archive</p>
+    <h2>my progress</h2>
+    <ul>
+        <li><a href="coding.html">my first day coding</a></li>
+    </ul>
+    <ul>
+        <li><a href="cooding.html">my favourite baseball team</a></li>
+    </ul>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call to display clock immediately
+    </script>
+</body>
+</html>
