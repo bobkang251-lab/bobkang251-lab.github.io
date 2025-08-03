@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArchiveChang</title>
@@ -15,15 +17,25 @@
             font-size: 2.5rem;
             font-weight: light;
             color: #000000;
-            background: linear-gradient(90deg, #7e7e7e, #87cefa, #b19cd9);
+            background: linear-gradient(90deg, #ffadf8);
             padding: 12px 28px;
             border-radius: 16px;
             box-shadow: 0 4px 16px #0002;
             letter-spacing: 2px;
             z-index: 10;
         }
+
+        #clock:hover {
+            background: linear-gradient(90deg, #ffffff);
+            color: #000000;
+            transform: scale(1.05);
+        }
+
         body {
-            background: linear-gradient(135deg, #00000083, #2f00ffe1, #ffffff, #ffffff);
+            color: #000000;
+            font-weight: bolder;
+            background: url(lay.jpg) no-repeat center center fixed;
+            background-size: cover;
             font-family: "Bitcount Prop Single", system-ui;
             display: flex;
             flex-direction: column;
@@ -32,13 +44,15 @@
             min-height: 100vh;
             margin: 0;
             text-align: center;
-            position: relative; /* Needed for absolute positioning */
+            position: relative;
+            /* Needed for absolute positioning */
         }
+
         a {
             display: inline-block;
             padding: 10px 22px;
             margin: 8px 0;
-            background: linear-gradient(90deg, #ffb6c1, #87cefa, #b19cd9);
+            background: linear-gradient(90deg, #50b3ff);
             color: #222;
             text-decoration: none;
             border-radius: 8px;
@@ -46,15 +60,17 @@
             box-shadow: 0 2px 8px #0002;
             transition: background 0.3s, color 0.3s, transform 0.2s;
         }
+
         a:hover {
-            background: linear-gradient(90deg, #b19cd9, #87cefa, #ffb6c1);
-            color: #fff;
+            background: linear-gradient(90deg, #ffffff);
+            color: #000000;
             transform: scale(1.05);
         }
     </style>
 </head>
+
 <body>
-    <img src="clipart3302349.png" alt=""width="300">
+    <img src="clipart3302349.png" alt="" width="300">
     <div id="clock"></div>
     <h1>Hello My Friend</h1>
     <p>Welcome to My first ever website</p>
@@ -78,4 +94,5 @@
         updateClock(); // Initial call to display clock immediately
     </script>
 </body>
+
 </html>
