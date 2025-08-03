@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Kyu`s magic conch</title>
+    <style>
+        body {
+            background : url(silas-baisch-K785Da4A_JA-unsplash.jpg) no-repeat center center fixed;
+            font-family: "Bitcount Prop Single", system-ui;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .dice {
+            font-size: 80px;
+            margin: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kyu`s magic conch</h1>
+    <div class="dice" id="dice">🎲</div>
+    <button onclick="rollDice()">Ask Conch</button>
+    <p id="result"></p>
+
+    <script>
+        function rollDice() {
+            const num = Math.floor(Math.random() * 2) + 1;
+            const diceFaces = ['no', 'yes'];
+            document.getElementById('dice').textContent = diceFaces[num - 1];
+            document.getElementById('result').textContent = 'The answer is...' + diceFaces[num -1] + '!';
+        }
+    </script>
+</body>
+
+</html>
